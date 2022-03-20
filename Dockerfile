@@ -10,6 +10,5 @@ RUN R -e 'BiocManager::install(ask = F)' && R -e 'BiocManager::install(c("magick
 
 ### Install asciinema
 RUN apt-get install -y  \
-asciinema 
-
-
+asciinema
+RUN R -e 'BiocManager::install(ask = F)' && R -e 'BiocManager::install("GWASTools")'
